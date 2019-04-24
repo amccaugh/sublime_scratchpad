@@ -26,13 +26,13 @@ class ScratchpadCommand(WindowCommand):
 def checkAndFillEmpty(scratchpadFile):
   global headerText
   if not isfile(scratchpadFile):
-    with open(scratchpadFile, "ab", encoding="utf-8") as scratchFile:
+    with open(scratchpadFile, "a", encoding="utf-8") as scratchFile:
       scratchFile.write(headerText)
 
 def putTimeStamp(scratchpadFile):
   timeStamp = "\n\n" + strftime("%c") + " : " + "\n" +"========================" + "\n"
   # timeStamp = timeStamp.encode('utf-8')
-  with open(scratchpadFile, "ab", encoding="utf-8") as scratchFile:
+  with open(scratchpadFile, "a", encoding="utf-8") as scratchFile:
       scratchFile.write(timeStamp)
   with open(scratchpadFile) as scratchFile:
     count = sum(1 for line in scratchFile)
