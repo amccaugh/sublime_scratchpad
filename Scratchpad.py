@@ -30,10 +30,10 @@ def checkAndFillEmpty(scratchpadFile):
       scratchFile.write(headerText)
 
 def putTimeStamp(scratchpadFile):
-  # timeStamp = "\n\n" + strftime("%c") + " : " + "\n" +"========================" + "\n"
-  # timeStamp = timeStamp.encode('utf-8')
-  # with open(scratchpadFile, "a", encoding="utf-8") as scratchFile:
-  #     scratchFile.write(timeStamp)
+  timeStamp = "\n\n" + strftime("%c") + " : " + "\n" +"========================" + "\n"
+  timeStamp = timeStamp.encode('utf-8')
+  with open(scratchpadFile, "a", encoding="utf-8") as scratchFile:
+      scratchFile.write(timeStamp)
   with open(scratchpadFile, encoding="utf-8") as scratchFile:
     count = sum(1 for line in scratchFile)
   return count
