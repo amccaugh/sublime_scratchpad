@@ -34,6 +34,6 @@ def putTimeStamp(scratchpadFile):
   # timeStamp = timeStamp.encode('utf-8')
   # with open(scratchpadFile, "a", encoding="utf-8") as scratchFile:
   #     scratchFile.write(timeStamp)
-  with open(scratchpadFile) as scratchFile:
+  with open(scratchpadFile, encoding="utf-8") as scratchFile:
     count = sum(1 for line in scratchFile)
   return count
