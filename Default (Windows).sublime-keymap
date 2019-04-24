@@ -1,4 +1,2 @@
 [
-  { "keys": ["ctrl+space"], "command": "scratchpad" },
-  { "keys": ["ctrl+alt+space"], "command": "open_scratchpad" }
 ]
