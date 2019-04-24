@@ -4,15 +4,8 @@ from time import strftime
 from os.path import isfile
 
 headerText = """
-    _____                _       _                     _
-   /  ___|              | |     | |                   | |
-   \ `--.  ___ _ __ __ _| |_ ___| |__  _ __   __ _  __| |
-    `--. \/ __| '__/ _` | __/ __| '_ \| '_ \ / _` |/ _` |
-   /\__/ / (__| | | (_| | || (__| | | | |_) | (_| | (_| |
-   \____/ \___|_|  \__,_|\__\___|_| |_| .__/ \__,_|\__,_|
-                                      | |
-                                      |_|
-
+scratchpad.txt
+==============
 """
 
 class OpenScratchpadCommand(WindowCommand):
@@ -37,6 +30,7 @@ def checkAndFillEmpty(scratchpadFile):
 
 def putTimeStamp(scratchpadFile):
   timeStamp = "\n\n" + strftime("%c") + " : " + "\n" +"========================" + "\n"
+  timeStamp = timeStamp.encode('utf-8')
   with open(scratchpadFile, "a") as scratchFile:
       scratchFile.write(timeStamp)
   with open(scratchpadFile) as scratchFile:
